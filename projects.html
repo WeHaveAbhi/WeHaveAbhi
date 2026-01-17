@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Wehaveabhi</title>
+    
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Background Shapes */
+        .bg-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            background: #6b73ff;
+            top: -50px;
+            left: -100px;
+        }
+
+        .shape-2 {
+            width: 250px;
+            height: 250px;
+            background: #00c4ff;
+            bottom: -50px;
+            right: -50px;
+        }
+
+        .watch-btn {
+            margin-top: 10px;
+            padding: 8px 18px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            pointer-events: auto;
+        }
+        .watch-btn:hover {
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="assets/video/raybanvideorender.mp4" type="video/mp4">
+    </video>
+
+    <!-- Main content container -->
+    <div class="main-container" style="visibility: visible;">
+
+    <!-- Vertical Neumorphic Navbar -->
+    <nav class="sidebar">
+        <ul>
+            <li>
+                <a href="index.html" class="nav-button">
+                    <i class="fa-solid fa-house icon"></i>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html" class="nav-button">
+                    <i class="fa-solid fa-user icon"></i>
+                    <span class="text">About Me</span>
+                </a>
+            </li>
+            <li>
+                <!-- Set 'Projects' as the active page -->
+                <a href="projects.html" class="nav-button active">
+                    <i class="fa-solid fa-folder-open icon"></i>
+                    <span class="text">Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html" class="nav-button">
+                    <i class="fa-solid fa-envelope icon"></i>
+                    <span class="text">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- The main content area is now empty, ready for new content -->
+    <main class="content">
+        <!-- Background Elements -->
+        <div class="bg-shape shape-1"></div>
+        <div class="bg-shape shape-2"></div>
+
+        <section class="projects-gallery">
+            <h2 class="section-title">My Work</h2>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="gundam">Gundam</button>
+                <button class="filter-btn" data-filter="images">Rendered Images</button>
+                <button class="filter-btn" data-filter="videos">Rendered Videos</button>
+            </div>
+
+            <!-- Projects Grid (reusing work-grid style) -->
+            <div class="work-grid projects-grid">
+                
+                <!-- Each work-item has a data-category attribute for filtering -->
+                <div class="work-item project-card" data-category="images">
+                    <img src="assets/Images/raybanglassesworkbenchrender.png" alt="Ray-Ban glasses on a workbench">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Ray-Ban Stories</h3>
+                            <p>Workbench Render</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item project-card" data-category="images">
+                    <img src="assets/Images/raybanglassescyclerender.png" alt="Ray-Ban glasses cycle render">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Ray-Ban Stories</h3>
+                            <p>Cycles Render</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item project-card work-item-portrait" data-category="images">
+                    <img src="assets/Images/CGICanCommercialWorkbenchRender.png" alt="CGI Can Commercial Workbench Render">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>CGI Commercial</h3>
+                            <p>Workbench Preview</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item project-card work-item-portrait" data-category="images">
+                    <img src="assets/Images/CGICanCommercialCycleRender.png" alt="CGI Can Commercial Cycle Render">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>CGI Commercial</h3>
+                            <p>Final Render</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item project-card" data-category="videos">
+                    <video autoplay muted loop playsinline style="width: 100%; height: 100%; display: block;">
+                        <source src="assets/video/CGICanCommercialCycleRender.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>CGI Can Commercial</h3>
+                            <p>Cycle Render Video</p>
+                            <button class="watch-btn" data-video-src="assets/video/CGICanCommercialCycleRender.mp4">
+                                <i class="fa-solid fa-play"></i> Watch Full Video
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item project-card" data-category="images">
+                    <img src="assets/Images/MechanicalWalkingCreatureWorkbenchRender.png" alt="Mechanical Walking Creature Workbench Render">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Mech Walker</h3>
+                            <p>Concept Art</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item project-card" data-category="images">
+                    <img src="assets/Images/MechanicalWalkingCreatureCycleRender.png" alt="Mechanical Walking Creature Cycle Render">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Mech Walker</h3>
+                            <p>3D Visualization</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item project-card" data-category="videos">
+                    <video autoplay muted loop playsinline style="width: 100%; height: 100%; display: block;">
+                        <source src="assets/video/MechanicalWalkingCreatureCycleRender.mkv" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Mech Walker</h3>
+                            <p>Cycle Render Video</p>
+                            <button class="watch-btn" data-video-src="assets/video/MechanicalWalkingCreatureCycleRender.mkv">
+                                <i class="fa-solid fa-play"></i> Watch Full Video
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item project-card work-item-portrait" data-category="images">
+                    <img src="assets/Images/MechanicalRobotWorkbenchRender.png" alt="Mechanical Robot Workbench Render">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Robot Anatomy</h3>
+                            <p>Rigging & Modeling</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item project-card work-item-portrait" data-category="images">
+                    <img src="assets/Images/MechanicalRobotCycleRender.png" alt="Mechanical Robot Cycle Render">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Robot Anatomy</h3>
+                            <p>Material Study</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item project-card" data-category="videos">
+                    <video autoplay muted loop playsinline style="width: 100%; height: 100%; display: block;">
+                        <source src="assets/video/MechanicalRobotCycleRender.mkv" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Robot Anatomy</h3>
+                            <p>Cycle Render Video</p>
+                            <button class="watch-btn" data-video-src="assets/video/MechanicalRobotCycleRender.mkv">
+                                <i class="fa-solid fa-play"></i> Watch Full Video
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Projects -->
+
+                <div class="work-item project-card" data-category="videos">
+                    <video autoplay muted loop playsinline width="100%" style="border-radius: 10px; display: block; object-fit: cover;">
+                        <source src="assets/video/TeslaCarEdit.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Tesla Edit</h3>
+                            <p>Cinematic Car Render</p>
+                            <button class="watch-btn" data-video-src="assets/video/TeslaCarEdit.mp4">
+                                <i class="fa-solid fa-play"></i> Watch Full Video
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-item project-card" data-category="videos">
+                    <video autoplay muted loop playsinline width="100%" style="border-radius: 10px; display: block; object-fit: cover;">
+                        <source src="assets/video/CinematicShowreel.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Cinematic Reel</h3>
+                            <p>Highlight Compilation</p>
+                            <button class="watch-btn" data-video-src="assets/video/CinematicShowreel.mp4">
+                                <i class="fa-solid fa-play"></i> Watch Full Video
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gundam Project Images -->
+                <div class="work-item project-card" data-category="gundam">
+                    <img src="assets/gundam-project/Sample 2.jpg" alt="Gundam Project Image 1">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Gundam Project</h3>
+                            <p>Image 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item project-card" data-category="gundam">
+                    <img src="assets/gundam-project/Screenshot 2025-02-15 230114.png" alt="Gundam Project Image 2">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Gundam Project</h3>
+                            <p>Image 2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item project-card" data-category="gundam">
+                    <img src="assets/gundam-project/Screenshot 2025-02-15 230232.png" alt="Gundam Project Image 3">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Gundam Project</h3>
+                            <p>Image 3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item project-card" data-category="gundam">
+                    <img src="assets/gundam-project/Screenshot 2025-02-18 110928.png" alt="Gundam Project Image 4">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Gundam Project</h3>
+                            <p>Image 4</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item project-card" data-category="gundam">
+                    <img src="assets/gundam-project/Screenshot 2025-02-18 110948.png" alt="Gundam Project Image 5">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Gundam Project</h3>
+                            <p>Image 5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item project-card" data-category="gundam">
+                    <img src="assets/gundam-project/Screenshot 2025-05-27 191342.png" alt="Gundam Project Image 6">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <h3>Gundam Project</h3>
+                            <p>Image 6</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="mailto:shaabhishek232@gmail.com" class="footer-email"wehaveabhi@gmail.com</a>
+            <div class="social-links">
+                <a href="https://www.instagram.com/wehaveabhi/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.threads.net/@wehaveabhi" target="_blank" aria-label="Threads"><i class="fab fa-threads"></i></a>
+                <a href="https://in.pinterest.com/wehaveabhi" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <p class="footer-copyright">&copy; 2024 Wehaveabhi. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    </div> <!-- Closing main-container -->
+
+    <!-- Lightbox Modal for viewing images -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" style="display: none;">
+        <video class="lightbox-content" id="lightbox-video" controls controlsList="nodownload" style="display: none; max-height: 80vh; width: auto; max-width: 90vw;"></video>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <script>
+        // JavaScript for the filterable gallery
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.projects-grid .work-item');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxVideo = document.getElementById('lightbox-video');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const closeBtn = document.querySelector('.lightbox-close');
+            let slideIndex = 0;
+            const items = [];
+
+            galleryItems.forEach((item, index) => {
+                items.push(item);
+                item.addEventListener('click', () => {
+                    slideIndex = index;
+                    openLightbox(item);
+                });
+            });
+
+            function openLightbox(item) {
+                lightbox.classList.add('active');
+                const video = item.querySelector('video');
+                const img = item.querySelector('img');
+
+                if (video) {
+                    lightboxImg.style.display = 'none';
+                    lightboxVideo.style.display = 'block';
+                    lightboxVideo.src = video.querySelector('source').src;
+                    lightboxCaption.textContent = item.querySelector('h3').textContent;
+                    lightboxVideo.play();
+                } else if (img) {
+                    lightboxVideo.style.display = 'none';
+                    lightboxVideo.pause();
+                    lightboxImg.style.display = 'block';
+                    lightboxImg.src = img.src;
+                    lightboxCaption.textContent = img.alt;
+                }
+            }
+
+            function showSlides(n) {
+                if (n >= items.length) { slideIndex = 0; }
+                if (n < 0) { slideIndex = items.length - 1; }
+                openLightbox(items[slideIndex]);
+            }
+
+            window.plusSlides = function(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Function to close the lightbox
+            const closeLightbox = () => {
+                lightbox.classList.remove('active');
+                lightboxVideo.pause();
+                lightboxVideo.src = "";
+            };
+
+            // Close lightbox when clicking the close button or the background
+            closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) { // Only close if the background is clicked
+                    closeLightbox();
+                }
+            });
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Set active class on button
+                    document.querySelector('.filter-btn.active').classList.remove('active');
+                    button.classList.add('active');
+
+                    const filter = button.getAttribute('data-filter');
+
+                    // Show/hide gallery items based on the new filter
+                    galleryItems.forEach(item => {
+                        const shouldShow = filter === 'all' || item.getAttribute('data-category') === filter;
+
+                        if (shouldShow) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (lightbox.classList.contains('active')) {
+                    if (e.key === 'ArrowLeft') {
+                        plusSlides(-1);
+                    } else if (e.key === 'ArrowRight') {
+                        plusSlides(1);
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Custom Cursor Script -->
+    <script>
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+
+        window.addEventListener('mousemove', function(e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
+        });
+    </script>
+</body>
+</html>
